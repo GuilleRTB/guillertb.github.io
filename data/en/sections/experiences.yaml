@@ -11,6 +11,24 @@ section:
 # Your experiences
 experiences:
 - company:
+    name: Amplitudes
+    location: Toulouse, Occitanie, France
+    # logo: /images/sections/experiences/amplitudes.png
+    # darkLogo: /images/sections/experiences/amplitudes.png
+
+  positions:
+  - designation: AI Engineer (CDI)
+    start: Jan 2026
+    # no end date provided: current position, rendered as "Present"
+    responsibilities:
+    - "Design and development of a **multi-agent conversational assistant**: architecture and orchestration of specialized agents."
+    - "Development of workflows for **search, booking, and trip management**."
+    - "Integration of **RAG**, **tool calling**, **MCP**, and **real-time streaming**."
+    - "Management of conversational context and tasks with **Redis**."
+    - "Deployment with **Docker**, **Kubernetes**, and **GitLab CI/CD**."
+    - "**Stack**: Python, FastAPI, LiteLLM, RAG, Redis, PostgreSQL, Docker, and Kubernetes."
+
+- company:
     name: Intent Technologies
     url: "https://intent.tech/"
     location: Toulouse, Occitanie, France
@@ -21,10 +39,9 @@ experiences:
     overview: "Intent Technologies is a leading company in data management and smart building solutions. Its platform centralizes, structures, and leverages data from equipment, services, and user interactions to enhance energy efficiency, predictive maintenance, and overall occupant experience."
 
   positions:
-  - designation: AI Engineer
-    start: Mai 2025
-    # don't provide end date if you are currently working there. It will be replaced by "Present"
-    end: Sepb2025
+  - designation: AI Engineer (Internship)
+    start: Mar 2025
+    end: Sep 2025
     # give some points about what was your responsibilities at the company.
     responsibilities:
     - "Development of an end-to-end **NLP model** for information extraction and generation from documents. Implementation of all stages of the lifecycle: **design**, **data preparation**, and **evaluation methodology**."
