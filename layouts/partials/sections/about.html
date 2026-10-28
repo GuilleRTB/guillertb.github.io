@@ -1,0 +1,27 @@
+{{/* Two-column About: summary on the left, key facts on the right. */}}
+{{ $sectionID := replace (lower .section.name) " " "-"  }}
+{{ if .section.id }}
+  {{ $sectionID = .section.id }}
+{{ end }}
+
+<div class="container anchor about-section" id="{{ $sectionID }}">
+  <div class="row g-5">
+    <div class="col-lg-7">
+      <p class="section-eyebrow">{{ .section.name }}</p>
+      {{ with .designation }}<h2 class="about-heading">{{ . }}</h2>{{ end }}
+      <div class="about-summary">{{ .summary | markdownify }}</div>
+    </div>
+    {{ with .facts }}
+      <div class="col-lg-5">
+        <dl class="about-facts">
+          {{ range . }}
+            <div class="about-fact">
+              <dt>{{ .label }}</dt>
+              <dd>{{ .value | markdownify }}</dd>
+            </div>
+          {{ end }}
+        </dl>
+      </div>
+    {{ end }}
+  </div>
+</div>

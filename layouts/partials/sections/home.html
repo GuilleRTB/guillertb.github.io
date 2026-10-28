@@ -1,0 +1,69 @@
+{{/* Minimal hero: overrides the theme's full-screen background image hero. */}}
+{{ $author:= site.Data.author }}
+{{ if (index site.Data site.Language.Lang).author }}
+  {{ $author = (index site.Data site.Language.Lang).author }}
+{{ end }}
+
+{{ $sections:= site.Data.sections }}
+{{ if (index site.Data site.Language.Lang).sections }}
+  {{ $sections = (index site.Data site.Language.Lang).sections }}
+{{ end }}
+{{ $about := index $sections "about" }}
+
+{{ $authorImage:= "/images/default-avatar.png" }}
+{{ if $author.image }}
+  {{ $authorImage = $author.image }}
+{{ end }}
+{{ $authorImage := resources.Get $authorImage }}
+{{ if and $authorImage (and (ne $authorImage.MediaType.SubType "svg") ( ne $authorImage.MediaType.SubType "gif")) }}
+  {{ $authorImage = $authorImage.Fill "640x640 Center q85" }}
+{{ end }}
+
+<section class="container-fluid home hero" id="home">
+  <div class="container hero-inner">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-7 order-2 order-lg-1">
+        {{ with $author.location }}
+          <p class="hero-eyebrow"><span class="hero-dot"></span>{{ . }}</p>
+        {{ end }}
+        <h1 class="hero-name">{{ $author.name }}</h1>
+        {{ with $author.role }}
+          <p class="hero-role">{{ . }}</p>
+        {{ end }}
+        {{ with $author.tagline }}
+          <p class="hero-tagline">{{ . | markdownify }}</p>
+        {{ end }}
+        <div class="hero-actions">
+          {{ with $about }}
+            {{ range .resourceLinks }}
+              <a class="btn btn-hero-primary" href="{{ .url | relURL }}" target="_blank" rel="noopener">
+                <i class="fas fa-arrow-down me-2"></i>{{ .title }}
+              </a>
+            {{ end }}
+          {{ end }}
+          {{ with $author.contactInfo.email }}
+            <a class="btn btn-hero-secondary" href="mailto:{{ . }}">Get in touch</a>
+          {{ end }}
+        </div>
+        {{ with $about }}
+          <ul class="hero-social">
+            {{ range .socialLinks }}
+              {{ if ne .name "Email" }}
+                <li>
+                  <a href="{{ .url }}" title="{{ .name }}" aria-label="{{ .name }}" target="_blank" rel="{{ .rel | default "noopener" }}"><i class="{{ .icon }}"></i></a>
+                </li>
+              {{ end }}
+            {{ end }}
+          </ul>
+        {{ end }}
+      </div>
+      <div class="col-lg-5 order-1 order-lg-2">
+        {{ with $authorImage }}
+          <div class="hero-portrait">
+            <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="{{ $author.name }}" />
+          </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>

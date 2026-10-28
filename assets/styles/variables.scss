@@ -1,0 +1,114 @@
+@use 'sass:map';
+
+$breakpoints: (
+  tiny: 320px,
+  small: 640px,
+  medium: 768px,
+  large: 1024px,
+  very-large: 1280px,
+  extra-large: 1536px,
+  ultra-large: 2560px,
+);
+
+// Color are chosen from TailwindCSS color scheme
+// https://tailwindcss.com/docs/customizing-colors
+
+// transitions
+$transition-duration: 0.3s;
+$transition-type: ease-out;
+
+// borders and shadows
+$box-shadow: 0px 12px 32px rgba(15, 23, 42, 0.08);
+
+// themes
+// Neutral, low-contrast surfaces with a single blue accent.
+$themes: (
+  'light': (
+    // blue 600
+    'accent-color': #2563eb,
+    // blue 700
+    'hover-over-accent-color': #1d4ed8,
+    'text-over-accent-color': #ffffff,
+    'bg-primary': #ffffff,
+    // slate 900
+    'bg-primary-inverse': #0f172a,
+    // slate 50
+    'bg-secondary': #f8fafc,
+    'bg-card': #ffffff,
+    // slate 900
+    'heading-color': #0f172a,
+    // slate 600
+    'text-color': #475569,
+    // slate 300
+    'inverse-text-color': #cbd5e1,
+    // slate 500
+    'muted-text-color': #64748b,
+    // rose 600
+    'inline-code-color': #e11d48,
+    // amber 200
+    'highlight-color': #fde68a,
+    // slate 900
+    'footer-color': #0f172a,
+  ),
+  'dark': (
+    // blue 400
+    'accent-color': #60a5fa,
+    // blue 300
+    'hover-over-accent-color': #93c5fd,
+    'text-over-accent-color': #0b0f17,
+    'bg-primary': #0b0f17,
+    'bg-primary-inverse': #0f172a,
+    'bg-secondary': #10151f,
+    'bg-card': #151b26,
+    // slate 100
+    'heading-color': #f1f5f9,
+    // slate 400
+    'text-color': #a3afc2,
+    'inverse-text-color': #0f172a,
+    // slate 500
+    'muted-text-color': #7c8799,
+    // rose 400
+    'inline-code-color': #fb7185,
+    // amber 200
+    'highlight-color': #fde68a,
+    'footer-color': #070a10,
+  ),
+);
+
+$brand-colors: (
+  'facebook': #3b5998,
+  'twitter': #1da1f2,
+  'linkedin': #0077b5,
+  'reddit': #ff4500,
+  'tumblr': #35465c,
+  'pocket': #ef4056,
+  'diaspora': #1e1e1e,
+  'whatsapp': #25d366,
+);
+
+$alerts: (
+  'success': (
+    // green 100
+    'bg-color': #dcfce7,
+    // green 800
+    'text-color': #166534,
+  ),
+  'info': (
+    // sky 100
+    'bg-color': #e0f2fe,
+    // sky 800
+    'text-color': #075985,
+  ),
+  'warning': (
+    // yellow 100
+    'bg-color': #fef9c3,
+    // yellow 800
+    'text-color': #854d0e,
+  ),
+  'danger': (
+    // red 100
+    'bg-color': #fee2e2,
+    // red 800
+    'text-color': #991b1b,
+  ),
+);

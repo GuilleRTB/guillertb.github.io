@@ -8,7 +8,7 @@ section:
   template: sections/about.html
 
 # your designation
-designation: Master’s Graduate in Machine Learning & NLP
+designation: AI Engineer building LLM agents, RAG and NLP systems
 # your company information
 #company:
 #  name: Example Co.
@@ -42,32 +42,13 @@ resourceLinks:
 - title: "My Resume"
   url: "files/CV_anglais.pdf"
 
-# Show your badges
-# You can show your verifiable certificates from https://www.credly.com.
-# You can also show a circular bar indicating the level of expertise on a certain skill
-badges:
-#- type: certification
-#  name: Certified Kubernetes Security Specialist
-#  url: "https://www.credly.com/org/the-linux-foundation/badge/exam-developer-certified-kubernetes-security-specialist"
-#  badge: "https://images.credly.com/size/680x680/images/f4bf92ed-8985-40b2-bc07-2f9308780854/kubernetes-security-specialist-logo-examdev.png"
-
-- type: soft-skill-indicator
-  name: Team Work
-  percentage: 90
-  color: blue
-
-- type: soft-skill-indicator
-  name: Curiosity
-  percentage: 85
-  color: yellow
-
-- type: soft-skill-indicator
-  name: Creativity
-  percentage: 90
-  color: orange
-
-# you can also provide color code instead of the color name
-# - type: soft-skill-indicator
-#   name: Example 1
-#   percentage: 75
-#   color: "#00adb5"
+# Key facts shown next to the summary
+facts:
+- label: Currently
+  value: AI Engineer at Amplitudes
+- label: Focus
+  value: Multi-agent systems, RAG, NLP
+- label: Education
+  value: Master’s in Artificial Intelligence, Université Toulouse III
+- label: Based in
+  value: Toulouse, France

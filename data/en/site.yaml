@@ -1,5 +1,5 @@
 # Copyright Notice
-copyright: © 2020 Copyright.
+copyright: © 2026 Guilhem Ratabouil
 
 # A disclaimer notice for the footer. Make sure you have set "params.footer.disclaimer.enable: true" in your `config.yaml` file.
 disclaimer: "This theme is under MIT license. So, you can use it for non-commercial, commercial, or private uses.
@@ -8,6 +8,9 @@ However, the theme author does not provide any warranty or takes any liability f
 
 # Meta description for your site.  This will help the search engines to find your site.
 description: Portfolio and personal blog of Guilhem Ratabouil.
+
+# title shown in the top navbar
+navBarTitle: Guilhem Ratabouil
 
 # specify the list of custom menus that you want to show in the top navbar.
 # they will be separated by a divider from the main menus.
@@ -25,5 +28,5 @@ openGraph:
   title: Guilhem's Portfolio
   type: website
   description: Portfolio and personal blog of Guilhem Ratabouil.
-  image: images/author/guilhem.jpg
+  image: images/author/perfil.jpg
   url: https://guillertb.github.io
